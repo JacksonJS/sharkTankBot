@@ -17,4 +17,4 @@ Unless something went wrong, your bot will be up and retweeting!
 
 
 
-Initially forked from https://github.com/nisrulz/twitterbot-nodejs
+Initially forked from [https://github.com/nisrulz/twitterbot-nodejs](https://github.com/nisrulz/twitterbot-nodejs)
