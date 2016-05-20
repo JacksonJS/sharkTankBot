@@ -1,0 +1,24 @@
+RT @The_JoyofEating: @robertherjavec It was very nice meeting you Robert! You are such a great guy! #sharkrobert #sharktank https://t.co/lRâ¦
+{ [Error: You have already retweeted this tweet.]
+  message: 'You have already retweeted this tweet.',
+  code: 327,
+  allErrors: [ { code: 327, message: 'You have already retweeted this tweet.' } ],
+  twitterReply: { errors: [ [Object] ] },
+  statusCode: 403 }
+/home/j/BOTS/tankBot_improved/bot.js:77
+      var retweetId = data.statuses[0].id_str;
+                                      ^
+
+TypeError: Cannot read property 'id_str' of undefined
+    at /home/j/BOTS/tankBot_improved/bot.js:77:39
+    at /home/j/BOTS/tankBot_improved/node_modules/twit/lib/twitter.js:118:13
+    at onRequestComplete (/home/j/BOTS/tankBot_improved/node_modules/twit/lib/twitter.js:325:5)
+    at Request.<anonymous> (/home/j/BOTS/tankBot_improved/node_modules/twit/lib/twitter.js:337:7)
+    at emitOne (events.js:95:20)
+    at Request.emit (events.js:182:7)
+    at Gunzip.<anonymous> (/home/j/BOTS/tankBot_improved/node_modules/request/request.js:996:12)
+    at emitNone (events.js:85:20)
+    at Gunzip.emit (events.js:179:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)

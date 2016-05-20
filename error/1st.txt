@@ -1,0 +1,13 @@
+<F11>TypeError: Cannot read property 'id_str' of undefined
+    at /home/j/BOTS/sharkTankBot1/bot.js:77:39
+    at /home/j/BOTS/sharkTankBot1/node_modules/twit/lib/twitter.js:118:13
+    at onRequestComplete (/home/j/BOTS/sharkTankBot1/node_modules/twit/lib/twitter.js:325:5)
+    at Request.<anonymous> (/home/j/BOTS/sharkTankBot1/node_modules/twit/lib/twitter.js:337:7)
+    at emitOne (events.js:95:20)
+    at Request.emit (events.js:182:7)
+    at Gunzip.<anonymous> (/home/j/BOTS/sharkTankBot1/node_modules/request/request.js:996:12)
+    at emitNone (events.js:85:20)
+    at Gunzip.emit (events.js:179:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
