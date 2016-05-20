@@ -1,6 +1,6 @@
 #SharkTankBot
 
-The souce code for @SharkTankBot on Twitter
+The souce code for [@SharkTankBot](https://twitter.com/SharkTankBot) on Twitter.
 
 To use:
 Simply rename fakeconfig.js to config.js and plug in your Twitter credentials.
