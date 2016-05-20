@@ -1,4 +1,6 @@
 config.js*
 .config.js*
-bot.js*
-package.json*
+
+*~
+*.swp
+*.swo
