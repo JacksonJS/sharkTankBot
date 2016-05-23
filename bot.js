@@ -23,7 +23,7 @@ var T = new Twit(require('./config.js'));
 
 
 // This is the URL of a search for the latest tweets on the #hashtag.
-var hastagSearch = { q: "#beyondthetankSharkTank OR #SharkTank", count: 3, result_type: "recent" };
+var hastagSearch = { q: "#beyondthetank OR #SharkTank OR kevinolearytv", count: 3, result_type: "recent" };
 
 // A user stream
 var stream = T.stream('statuses/filter', { track : ['@SharkTankBot'] } );
