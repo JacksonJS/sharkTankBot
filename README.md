@@ -12,7 +12,14 @@ Then run
 node bot.js
 ```
 
-Unless something went wrong, your bot will be up and retweeting!
+If you would like to run the bot forever, install the forever npm package
+`npm install -g forever`
+
+Then run the script using forever:
+```
+forever start --spinSleepTime 10000 bot.js
+```
+
 
 
 
