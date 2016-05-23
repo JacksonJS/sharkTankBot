@@ -20,7 +20,7 @@ Then run the script using forever:
 forever start --spinSleepTime 10000 bot.js
 ```
 
-
+---
 
 
 
