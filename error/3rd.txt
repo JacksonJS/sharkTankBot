@@ -1,0 +1,25 @@
+twitterReply: { errors: [ [Object] ] },
+  statusCode: 403 }
+/home/j/BOTS/tankBot_improved/bot.js:30
+  console.log('i was followed by: ' + name + ' @' + screenname);
+                                                    ^
+
+ReferenceError: screenname is not defined
+    at followed (/home/j/BOTS/tankBot_improved/bot.js:30:53)
+    at emitOne (events.js:90:13)
+    at emit (events.js:182:7)
+    at null.<anonymous>
+(/home/j/BOTS/tankBot_improved/node_modules/twit/lib/streaming-api-connection.js:298:56)
+    at emitOne (events.js:90:13)
+    at emit (events.js:182:7)
+    at Parser.parse
+(/home/j/BOTS/tankBot_improved/node_modules/twit/lib/parser.js:47:16)
+    at Gunzip.<anonymous>
+(/home/j/BOTS/tankBot_improved/node_modules/twit/lib/streaming-api-connection.js:134:21)
+    at emitOne (events.js:90:13)
+    at Gunzip.emit (events.js:182:7)
+    at readableAddChunk (_stream_readable.js:153:18)
+    at Gunzip.Readable.push (_stream_readable.js:111:10)
+    at Gunzip.Transform.push (_stream_transform.js:128:32)
+    at Zlib.callback (zlib.js:582:14)
+

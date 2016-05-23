@@ -14,7 +14,7 @@ var T = new Twit(require('./config.js'));
 var hastagSearch = { q: "#beyondthetankSharkTank OR #SharkTank", count: 3, result_type: "recent" };
 
 // A user stream
-var stream = T.stream('user');
+var stream = T.stream('statuses/filter', { track : ['@SharkTankBot'] } );
 // When someone follows the user
 stream.on('follow', followed);
 stream.on('tweet', tweetEvent);
@@ -33,35 +33,32 @@ function followed(event) {
 
 // Here a tweet event is triggered!
 function tweetEvent(tweet) {
-  // If we wanted to write a file out
-  // to look more closely at the data
-  // var fs = require('fs');
-  // var json = JSON.stringify(tweet,null,2);
-  // fs.writeFile("tweet.json", json, output);
 
-  // Who is this in reply to?
-  var reply_to = tweet.in_reply_to_screen_name;
   // Who sent the tweet?
   var name = tweet.user.screen_name;
   // What is the text?
-  var txt = tweet.text;
+  // var txt = tweet.text;
+  // the status update or tweet ID in which we will reply
+  var nameID  = tweet.id_str;
 
-  // Ok, if this was in reply to me
-  // Replace SharkTankBot with your own twitter handle
-  console.log(reply_to, name, txt);
-  if (reply_to === 'SharkTankBot') {
+  // Get rid of the @ mention
+  // var txt = txt.replace(/@myTwitterHandle/g, "");
 
-    // Get rid of the @ mention
-    txt = txt.replace(/@selftwitterhandle/g, '');
+  // Start a reply back to the sender
+  var reply = "You mentioned me! @" + name + ' ' + 'You are super cool!';
+  var params             = {
+    status: reply,
+    in_reply_to_status_id: nameID
+  };
 
-    // Start a reply back to the sender
-    var reply = "You mentioned me! @" + name + ' ' + ' #MyNewBestFriend🤑!';
-
-    console.log(reply);
-    // Post that tweet!
-    T.post('statuses/update', { status: reply }, tweeted);
-  }
-}
+  T.post('statuses/update', params, function(err, data, response) {
+    if (err !== undefined) {
+      console.log(err);
+    } else {
+      console.log('Tweeted: ' + params.status);
+    }
+  })
+};
 
 // This function finds the latest tweet with the #hashtag, and retweets it.
 function retweetLatest() {
