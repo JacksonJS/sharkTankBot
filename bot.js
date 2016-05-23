@@ -45,7 +45,7 @@ function tweetEvent(tweet) {
   // var txt = txt.replace(/@myTwitterHandle/g, "");
 
   // Start a reply back to the sender
-  var reply = "You mentioned me! @" + name + ' ' + 'You are super cool!';
+  var reply = "You mentioned me! @" + name + ' ' + ' #MyNewBestFriend🤑!!';
   var params             = {
     status: reply,
     in_reply_to_status_id: nameID
