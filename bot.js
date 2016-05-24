@@ -30,7 +30,7 @@ function followed(event) {
   console.log('I was followed by: ' + name + ' @' + screenName);
 }
 
-//my attempt at unfollow parameters
+//my attempt at unfollow parameters, may be blocked by api(not meant for this abuse :P)
 function unfollowed(event) {
   var name = event.source.name;
   var screenName = event.source.screen_name;
