@@ -15,6 +15,7 @@ var hastagSearch = { q: "#beyondthetank OR #SharkTank OR kevinolearytv", count: 
 var stream = T.stream('statuses/filter', { track : ['@SharkTankBot'] } );
 // When someone follows the user
 stream.on('follow', followed);
+//stream.on('unfollow', unfollowed);
 stream.on('tweet', tweetEvent);
 
 // In this callback we can see the name and screen name
@@ -27,6 +28,17 @@ function followed(event) {
 
   console.log('I was followed by: ' + name + ' @' + screenName);
 }
+
+//my attempt at unfollow parameters
+/*function unfollowed(event) {
+  var name = event.source.name;
+  var screenName = event.source.screen_name;
+  var response = "You're dead to me " + name + " @" + screenName + "😠!!"
+// Post that tweet!
+T.post('statuses/update', { status: response }, tweeted);
+
+console.log('I was unfollowed by: ' + name + ' @' + screenName);
+}*/
 
 
 // Here a tweet event is triggered!
