@@ -1,4 +1,5 @@
 // Debug flag
+// d
 
 var debug = false;
 // Our Twitter library
@@ -35,10 +36,10 @@ function unfollowed(event) {
   var name = event.source.name;
   var screenName = event.source.screen_name;
   var response = "You're dead to me " + name + " @" + screenName + "😠!!"
-// Post that tweet!
-T.post('statuses/update', { status: response }, tweeted);
+    // Post that tweet!
+    T.post('statuses/update', { status: response }, tweeted);
 
-console.log('I was unfollowed by: ' + name + ' @' + screenName);
+  console.log('I was unfollowed by: ' + name + ' @' + screenName);
 }
 
 
@@ -60,16 +61,20 @@ function tweetEvent(tweet) {
   var params             = {
     status: reply,
     in_reply_to_status_id: nameID
+
   };
 
-  T.post('statuses/update', params, function(err, data, response) {
-    if (err !== undefined) {
-      console.log(err);
-    } else {
-      console.log('Tweeted: ' + params.status);
-    }
-  })
-};
+  if (name !== "SharkTankBot"){
+
+    T.post('statuses/update', params, function(err, data, response) {
+      if (err !== undefined) {
+        console.log(err);
+      } else {
+        console.log('Tweeted: ' + params.status);
+      }
+    
+    })
+  }};
 
 // This function finds the latest tweet with the #hashtag, and retweets it.
 function retweetLatest() {
