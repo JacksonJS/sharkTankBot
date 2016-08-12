@@ -1,6 +1,6 @@
 {
   "name": "Sharktankbot",
   "tagline": "SharkTankBot source code",
-  "body": "The homepage for @sharkTankBot",
+  "body": "#SharkTankBot\r\n\r\nThe souce code for [@SharkTankBot](https://twitter.com/SharkTankBot) on Twitter.\r\n\r\nTo use:\r\nSimply rename fakeconfig.js to config.js and plug in your Twitter credentials.\r\n\r\nrun `$ npm install`.\r\n\r\nThen run \r\n```\r\nnode bot.js\r\n```\r\n\r\nIf you would like to run the bot forever, install the forever npm package\r\n`npm install -g forever`\r\n\r\nThen run the script using forever:\r\n```\r\nforever start --spinSleepTime 10000 bot.js\r\n```\r\n\r\n:wq!\r\n---\r\n\r\n\r\n\r\nInitially forked from [https://github.com/nisrulz/twitterbot-nodejs](https://github.com/nisrulz/twitterbot-nodejs)\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
